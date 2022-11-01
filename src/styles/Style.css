@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-dark-blue: #1E88E5;
+  --color-magenta: #363651;
+  --color-cyan: #3f6ce0;
+  --color-blue: #2196F3;
+  --color-white: #ffffff;
+  --color-red: #be2e2e;
+  --color-crimson: #7d2121;
+  --color-purple: #49499e;
+  --color-light-blue: #55556d;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+.menu-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.75;
+}
+.menu-link:hover {
+  background-color: var(--color-dark-blue);
+}
+.menu-link.active {
+  opacity: 1;
+  background-color: var(--color-dark-blue);
+}

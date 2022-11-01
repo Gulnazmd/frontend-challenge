@@ -1,13 +1,13 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import Header from '../../components/header/Header'
 
 const AllCats: FC = (props) => {
   return (
-    <div className='p-5 w-full'>
+    <div>
       <Header />
-      Hello
-     </div>
+      <div className='m-10 color-red'>Hello</div>
+    </div>
   )
 }
 
-export default AllCats;
+export default AllCats

@@ -1,11 +1,13 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "es2017"],
-    "types": ["node", "jest"],
+    "lib": [
+      "dom",
+      "es2017"
+    ],
     "module": "esnext",
     "moduleResolution": "node",
     "target": "es5",
-    "jsx": "react",
+    "jsx": "react-jsx",
     "importHelpers": true,
     "noUnusedLocals": true,
     "esModuleInterop": true,
@@ -15,22 +17,20 @@
     "skipLibCheck": true,
     "declaration": false,
     "sourceMap": false,
-    "baseUrl": "./",
+    "baseUrl": ".",
+    //"tsx": "react-tsx",
     "outDir": "./dist",
     "paths": {
-      "components": ["./src/components"],
-      "core": ["./src/core"],
-      "hooks": ["./src/hooks"],
-      "images": ["./src/images"],
-      "pages": ["./src/pages"],
-      "styles": ["./src/styles"],
-      "types": ["./src/types"],
-      "utils": ["./src/utils"],
-      "@/*": ["src/*"],
       "*": ["./src/*"]
     },
-    "typeRoots": ["typings/**/*.d.ts", "node_modules/@types", "src/types"]
+    "typeRoots": ["typings/**/*.d.ts", "node_modules/@types"],
   },
-  "include": ["src", "typings/**/*.d.ts", "./node_modules/@types"],
-  "exclude": ["**/*.js"]
+  "include": [
+    "src",
+    "typings/**/*.d.ts",
+    "./node_modules/@types"
+  ],
+  "exclude": [
+    "**/*.js"
+  ]
 }

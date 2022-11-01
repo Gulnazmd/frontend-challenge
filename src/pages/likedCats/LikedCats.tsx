@@ -1,10 +1,11 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import Header from '../../components/header/Header'
 
 const LikedCats: FC = (props) => {
   return (
-    <div className='p-5 w-full'>
-      <Header/>
+    <div>
+      <Header />
+      <div className='m-10 color-red'>My lovely cats</div>
      </div>
   )
 }

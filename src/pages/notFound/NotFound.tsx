@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import useDocumentTitle from '../../hooks/useDocumentTitle'
 
 const NotFound: FC = () => {
