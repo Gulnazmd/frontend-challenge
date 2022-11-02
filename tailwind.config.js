@@ -14,7 +14,10 @@ module.exports = {
           'light-blue': 'var(--color-light-blue)',
           cyan: 'var(--color-cyan)',
           magenta: 'var(--color-magenta)',
-        },
+      },
+      dropShadow: {
+        'xl': '10px 5px 5px rgba(0, 0, 0, 0.35)',
+      }
       },
   },
   plugins: [],

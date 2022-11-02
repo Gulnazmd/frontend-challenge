@@ -34,4 +34,5 @@ body {
 .menu-link.active {
   opacity: 1;
   background-color: var(--color-dark-blue);
+  height: 60px;
 }
