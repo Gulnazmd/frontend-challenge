@@ -1,10 +1,11 @@
 import axios from 'axios'
-import Cat from '../../components/cat/cat'
 import { FC, useEffect, useState } from 'react'
 import Header from '../../components/header/Header'
+import CatList from '../../components/catList/CatList'
 
 const AllCats: FC = (props) => {
   const [myCats, setCats] = useState()
+
   useEffect(() => {
     const url = 'https://api.thecatapi.com/v1/images/search?order=random&limit=25'
     axios.get(url).then((response) => {
@@ -16,7 +17,7 @@ const AllCats: FC = (props) => {
     <div>
       <Header />
       <div className='m-10'>
-        <Cat cats={myCats} />
+        <CatList cats={myCats}/>
       </div>
     </div>
   )

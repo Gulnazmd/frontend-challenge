@@ -1,27 +1,29 @@
-import { TCatsImages } from './types'
+import { FC, useState } from 'react'
+import { TCats } from '../catList/types'
+import hoveredHeart from '../../images/hoveredH.svg'
 import Heart from '../../images/heart.svg'
 
-const Cat = (props: { cats: any }) => {
-  const { cats } = props
+const Cat: FC<TCats> = ({ url, id }) => {
+  const [likedCats, setlikedCats] = useState(false)
 
-  if (!cats || cats.length === 0) return <p>No cats, sorry</p>
+  const addLikedCats = () => {
+    setlikedCats(!likedCats)
+  }
   return (
-    <div className='grid grid-cols-5 justify-between'>
-      {cats.map((cat: TCatsImages) => {
-        return (
-          <div className='mr-5 hover:drop-shadow-xl hover:w-60'>
-            <img
-              className='object-contain'
-              width={'225px'}
-              height={'225px'}
-              key={cat.id}
-              src={cat.url}
-              alt={cat.url}
-            />
-            <img className='w-10 h-10' src={Heart} />
-          </div>
-        )
-      })}
+    <div className='mr-5 hover:drop-shadow-xl hover:w-60'>
+      <img
+        className='object-contain cursor-pointer'
+        width={'225px'}
+        height={'225px'}
+        key={id}
+        src={url}
+        alt={url}
+      />
+      {!likedCats ? (
+        <img src={Heart} onClick={addLikedCats} className='absolute w-8 h-8' />
+      ) : (
+        <img src={hoveredHeart} onClick={addLikedCats} className='absolute w-8 h-8' />
+      )}
     </div>
   )
 }
