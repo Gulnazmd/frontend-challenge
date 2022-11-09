@@ -16,7 +16,7 @@ const AllCats: FC = (props) => {
   return (
     <div>
       <Header />
-      <div className='m-10'>
+      <div>
         <CatList cats={myCats}/>
       </div>
     </div>

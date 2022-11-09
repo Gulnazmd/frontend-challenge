@@ -4,12 +4,11 @@ export type TCatsImages = {
 }
 
 export type TCats = {
-  length: number
-  map: any
+  className?: string
+  map?: any
+  length?: number
   id: string
   onClick?: () => void
   url: string
-  width: number
-  height: number
-  likes: boolean
+  likes?: boolean
 }

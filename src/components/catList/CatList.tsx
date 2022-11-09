@@ -8,7 +8,7 @@ const CatList: FC<TCatsImages> = ({ cats }) => {
   return (
     <div className='grid grid-cols-5 justify-between'>
       {cats.map((cat: TCats) => {
-        return <Cat url={cat.url} width={cat.width} likes={false} map={undefined} length={0} height={cat.height} id={cat.id}/>
+        return <Cat url={cat.url} id={cat.id} likes={false} className="object-cover w-52 h-52 m-5 relative top-0 left-0"/>
       })}
     </div>
   )
